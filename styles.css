@@ -1,0 +1,175 @@
+/* Set the background to the GIF */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure full height */
+  background: url('postcard_3d_collision_500.gif') no-repeat center center fixed; 
+  background-color: rgb(42, 85, 165);
+  background-size: cover; /* Ensure the background GIF covers the entire page */
+  background-blend-mode: normal;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-size:20pt ;
+  color: rgb(251, 255, 0);
+  user-select: none;
+  cursor: not-allowed;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  user-select: none;
+  cursor: none;
+}
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /*border: 2px solid #000;*/
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+/* Animated Button Style */
+.animated-button {
+  display: inline-block; /* Button-like display */
+  padding: 15px 15px; /* Spacing inside button */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text */
+  /*background: linear-gradient(90deg, #ff000000,  #ff0000); /* Rainbow gradient #ff6a00, #ffd700, #00ff00, #00ffff, #0000ff, */
+  background:  linear-gradient(45deg,  #00ffff, #0000ff, #ff00ff); /* Rainbow gradient */
+  background-size: 400%; /* For animation effect */
+  border: none; /* Remove borders */
+  border-radius: 30px; /* Rounded button */
+  cursor: pointer; /* Pointer on hover */
+  transition: transform 0.1s ease; /* Smooth transition for hover effects */
+  animation: gradient-shift 10s infinite,text-color-change 10s infinite,underline-shift  10s infinite,vmovement 5s infinite ; /* Color-changing animation */
+}
+
+/* Hover Effect */
+.animated-button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.typing-container {
+  text-align: center;
+}
+
+.typing-effect {
+  font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+  font-size: 30px;
+  border-right: 1px solid #000;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.1s ease;
+  animation: typing 5s steps(41) 0s 1 normal both, blinkCaret 5s step-end infinite, text-color-change 10s infinite,gradient-shift 10s infinite,hmovement 10s infinite;
+}
+
+.my_border{
+  display: inline-block; /* Button-like display */
+
+  padding: 15px 30px; /* Spacing inside button */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  top: 50%;
+  left: 50%;
+  text-decoration: none; /* Remove underline */
+  background: linear-gradient(30deg,  #00ffff7a, #0066ff56, #ff00ff2c);
+  background-size: 400%; /* For animation effect */
+  border: none; /* Remove borders */
+  border-radius: 30px; /* Rounded button */
+  cursor: pointer; /* Pointer on hover */
+  border-width: 1mm;
+  border-style:dotted;
+  overflow: hidden;
+  user-select: none;
+  cursor: not-allowed;
+  animation:typing 0.1s steps(50) normal,gradient-shift 0.7s infinite, text-color-change 0.8s infinite,vmovement 5s infinite;
+}
+.my_border:hover{
+  transform: scale(1.1);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+@keyframes gradient-shift {
+  0% {
+      background-position: 0%;
+
+  }
+  33% {
+      background-position: 33%;
+  }
+  66% {
+      background-position: 66%;
+  }
+  100% {
+      background-position: 0%;
+  }
+}
+
+@keyframes hmovement{
+  0% {
+    transform: translateX(-100px);
+
+}
+50% {
+    transform: translateX(100px);
+}
+100% {
+    transform: translateX(-100px);
+}
+}
+
+@keyframes vmovement{
+  0% {
+    transform: translateY(10px);
+
+}
+50% {
+    transform: translateY(-10px);
+}
+100% {
+    transform: translateY(10px);
+}
+}
+/* Text Color Animation */
+@keyframes text-color-change {
+  0% { color: #8c00ff; } /* Red */
+  1% { color: #ff000000; } /* Gold */
+  5% { color: #ff0000; } /* Green */
+  50% { color: #ff0000da; } /* Blue */
+  90% { color: #6f00ff; } /* Magenta */
+}
+@keyframes underline-shift {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+

@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pradipta Sadhukhan-Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+          body { font-family:'Courier New', Courier, monospace; text-align: center; margin-top: 100px; }
+          input { margin: 0px 0; padding: 0px; font-size: 1em; }
+          button { padding: 5px 10px; font-size: 1em; cursor: pointer; }
+          #visitorInfo { margin-top: 20px; }
+        </style>
+      </head>
+  <html lang="en"></html>
+  
+  <body>
+        <header>
+
+            <div class="typing-container typing-effect">
+              <h1>Mr. Pradipta Sadhukhan's Personal Website.</h1>
+            </div>
+            <nav>
+                <ul>
+
+                 <div class="animated-button bouncing-style">
+                  <a href="index.html" class="Current"><img src="web.png" width="50" height="50"></a>
+                 </div>
+                 <div class="animated-button bouncing-style">
+                  <a href="about.html"><img src="aboutme.png" width="50" height="50"></a> 
+                 </div>
+                 <div class="animated-button bouncing-style">
+                  <a href="researchprojects.html"><img src="project.png" width="50" height="50"></a> 
+                 </div> 
+                 <div class="animated-button bouncing-style">
+                  <a href="researchinterests.html"><img src="interest.png" width="50" height="50"></a> 
+                 </div>
+                 <div class="animated-button bouncing-style">
+                  <a href="mywork.html"><img src="work.png" width="50" height="50"></a> 
+                 </div>
+                 <div class="animated-button bouncing-style">
+                  <a href="publications.html"><img src="publishing.png" width="50" height="50"></a> 
+                 </div> 
+                 <div class="animated-button bouncing-style">
+                  <a href="contact.html"><img src="contactme.png" width="50" height="50"></a>  
+                </ul>
+                <div class="animated-button bouncing-style">
+                 <a href="news.html"><img src="news.png" width="50" height="50"></a>  
+               </ul>
+            </nav>
+        </header>
+  </body>
+  
+  <!--<div style="height: 500px;"></div>  Empty spacer -->
+
+  <body>
+    <!--<h1>Visitor Counter</h1> -->
+    <!--<h1 class="typing-container typing-effect" ><img src="enistein.png" width="300" height="500"></h1>-->
+    <h1>Welcome to Pradipta's Website!</h1>
+    <p class="typing-container typing-effect">Number of your visit(s): <span id="visitCount">0</span></p>
+    <script>
+        // Check if visitCount already exists in localStorage
+        if (localStorage.getItem("visitCount")) 
+        {
+            // Increment the visit count
+            let count = parseInt(localStorage.getItem("visitCount"))+1;<!--+1--> 
+            localStorage.setItem("visitCount", count);
+        } 
+        else 
+        {
+            // First visit, initialize visit count
+            localStorage.setItem("visitCount", 1);
+        }
+
+        // Display the current visit count
+        document.getElementById("visitCount").textContent = localStorage.getItem("visitCount");
+    </script>
+    <!--<li><input type="text" id="userName" placeholder="Enter your name" /></li>
+    <li><input type="text" id="Email" placeholder="Enter your Email Address" /></li>
+    <li><input type="text" id="Phone" placeholder="Enter your Contact Number" /></li>
+    <button onclick="registerVisitor()">Register</button>
+    <div id="visitorInfo"></div>
+  
+    <script>
+      async function registerVisitor() {
+        const name = document.getElementById('userName').value.trim();
+        if (!name) {
+          alert('Please enter your name.');
+          return;
+        }
+  
+        const response = await fetch('/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name }),
+        });
+  
+        const data = await response.json();
+        document.getElementById('visitorInfo').innerHTML = `
+          <p>Hello, ${data.name}! You are visitor #${data.visitorCount}.</p>
+        `;
+      }
+    </script>-->
+  </body>
+
+
+
+ 
+  <body>
+    <footer>
+      <p class="my_border">Copyright &copy; Mr. Pradipta Sadhukhan <span id="currentYear"></span>_All rights reserved.</p>
+    </footer>
+  
+    <script>
+      // Get the current year and display it
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
