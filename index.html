@@ -14,6 +14,19 @@
   <html lang="en"></html>
   
   <body>
+    <audio id="bgMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+    window.addEventListener("load", () => {
+        document.body.addEventListener("click", () => {
+            document.getElementById("bgMusic").play();
+        }, { once: true });
+    });
+    </script>
+    <!-- <button class="mute-btn" onclick="toggleMusic()">🔊</button> -->
+
         <header>
 
             <div class="typing-container typing-effect">
